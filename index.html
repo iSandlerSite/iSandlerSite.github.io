@@ -1,53 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple To-Do List</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; overflow: hidden; height: 100vh; }
-        #todo-list { list-style: none; padding: 0; }
-        li { padding: 10px; border-bottom: 1px solid #ccc; }
-        button { margin-left: 10px; }
-    </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            document.documentElement.requestFullscreen = document.documentElement.requestFullscreen || 
-                document.documentElement.mozRequestFullScreen || 
-                document.documentElement.webkitRequestFullscreen || 
-                document.documentElement.msRequestFullscreen;
-            
-            if (document.documentElement.requestFullscreen) {
-                document.documentElement.requestFullscreen();
-            }
-        });
-    </script>
-</head>
-<body>
-    <h2>To-Do List</h2>
-    <input type="text" id="task-input" placeholder="Enter task">
-    <button onclick="addTask()">Add</button>
-    <ul id="todo-list"></ul>
-
-    <script>
-        function addTask() {
-            var input = document.getElementById("task-input");
-            var taskText = input.value;
-            if (taskText === "") return;
-            
-            var li = document.createElement("li");
-            li.textContent = taskText;
-            
-            var button = document.createElement("button");
-            button.textContent = "Remove";
-            button.onclick = function() { li.remove(); };
-            
-            li.appendChild(button);
-            document.getElementById("todo-list").appendChild(li);
-            
-            input.value = ""; 
-        }
-    </script>
-</body>
-</html>
+<!-- Begin ShoutJax - Chatbox - http://www.shoutjax.com -->
+<noscript>JavaScript must be enabled to use the <a href="http://www.shoutjax.com">ShoutJax Chatbox</a>.<br /></noscript>
+<link rel="stylesheet" type="text/css" href="http://www.shoutjax.com/site_files/chat_files/chat_styles.css" />
+<script language="javascript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script language="javascript" type="text/javascript" src="http://www.shoutjax.com/site_files/chat_files/chat.php?site_id=4095&amp;room_id=0"></script>
+<!-- Reciprocal Link - Basic Users Cannot Modify/Remove -->
+<a style="font-size:8pt; visibility:visible;" href="http://www.shoutjax.com" title="Get your own free ajax Chatbox chat widget at ShoutJax!">Powered by ShoutJax</a>
+<!-- End ShoutJax -->
 
